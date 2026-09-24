@@ -1,0 +1,93 @@
+.modalTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #102851;
+  margin: 0 0 0.5rem 0;
+}
+
+.restaurantNameHeading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2aa7ff;
+  margin: 0 0 1rem 0;
+}
+
+.detailsBox {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  color: #374151;
+}
+
+.detailsBox p {
+  margin: 0.25rem 0;
+}
+
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.inputLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.emailInput {
+  height: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.emailInput:focus {
+  border-color: #2aa7ff;
+}
+
+.btnActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.confirmBtn {
+  flex: 1;
+  background-color: #2aa7ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  height: 42px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.confirmBtn:hover {
+  background-color: #1a96ee;
+}
+
+.cancelBtn {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: none;
+  border-radius: 6px;
+  padding: 0 1.25rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}

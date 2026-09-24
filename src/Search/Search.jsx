@@ -4,10 +4,12 @@ import axios from "axios";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import SearchRestaurant from "../components/SearchRestaurant/SearchRestaurant";
 import RestaurantCard from "../components/RestaurantCard/RestaurantCard";
+import BookingModal from "../components/BookingModal/BookingModal";
 import Footer from "../components/Footer/Footer";
 import styles from "./Search.module.css";
 import restOffer1 from "../assets/restoffer1.png";
 import restOffer2 from "../assets/restoffer2.png";
+import AutohideSnackbar from "../components/AutohideSnackbar/AutohideSnackbar";
 
 export default function Search() {
   const [searchParams] = useSearchParams();
@@ -16,6 +18,15 @@ export default function Search() {
 
   const [restaurants, setRestaurants] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeBooking, setActiveBooking] = useState(null);
+
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
+  const handleConfirmSuccess = () => {
+    setSnackbarOpen(true);
+  };
 
   const randomAdBanner = useMemo(() => {
     const banners = [restOffer1, restOffer2];
@@ -41,6 +52,11 @@ export default function Search() {
         });
     }
   }, [state, city]);
+
+  const handleOpenSlot = ({ restaurant, date, time }) => {
+    setActiveBooking({ restaurant, date, time });
+    setIsModalOpen(true);
+  };
 
   return (
     <div className={styles.searchPageRoot}>
@@ -86,6 +102,7 @@ export default function Search() {
                 <RestaurantCard
                   key={restaurant["Restaurant ID"] || restaurant.id || idx}
                   restaurant={restaurant}
+                  onSelectSlot={handleOpenSlot}
                 />
               ))}
           </div>
@@ -99,6 +116,19 @@ export default function Search() {
           </aside>
         </div>
       </main>
+
+      <BookingModal
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        bookingDetails={activeBooking}
+        onConfirmSuccess={handleConfirmSuccess}
+      />
+
+      <AutohideSnackbar
+        open={snackbarOpen}
+        setOpen={setSnackbarOpen}
+        message="Reservation booked successfully!"
+      />
 
       <Footer />
     </div>
