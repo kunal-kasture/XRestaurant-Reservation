@@ -31,7 +31,7 @@ export default function Search() {
   const randomAdBanner = useMemo(() => {
     const banners = [restOffer1, restOffer2];
     return banners[Math.floor(Math.random() * banners.length)];
-  }, [state, city]);
+  }, []);
 
   useEffect(() => {
     if (state && city) {
