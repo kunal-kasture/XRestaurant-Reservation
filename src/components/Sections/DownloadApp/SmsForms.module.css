@@ -1,0 +1,43 @@
+.formRoot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.inputRow {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 440px;
+}
+.prefix {
+  padding: 0 12px;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.telInput {
+  border: none;
+  outline: none;
+  height: 48px;
+  flex: 1;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+.sendBtn {
+  background: #2aa7ff;
+  color: #ffffff;
+  border: none;
+  height: 48px;
+  padding: 0 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+.successMsg {
+  color: #00a500;
+  font-size: 0.85rem;
+}

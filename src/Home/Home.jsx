@@ -4,6 +4,13 @@ import Footer from "../components/Footer/Footer";
 import chefImg from "../assets/chef.png";
 import SearchRestaurant from "../components/SearchRestaurant/SearchRestaurant";
 
+import Offers from "../components/Sections/Offers/Offers";
+import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
+import Blogs from "../components/Sections/Blogs/Blogs";
+import OurFamilies from "../components/Sections/OurFamilies/OurFamilies";
+import FAQs from "../components/Sections/FAQs/FAQs";
+import DownloadApp from "../components/Sections/DownloadApp/DownloadApp";
+
 export default function Home() {
   return (
     <div className="home-page-root">
@@ -35,6 +42,18 @@ export default function Home() {
           <HeroServices />
         </div>
       </div>
+
+      <Offers />
+
+      <PatientCaring />
+
+      <Blogs />
+
+      <OurFamilies />
+
+      <FAQs />
+
+      <DownloadApp />
 
       <Footer />
     </div>

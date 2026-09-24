@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import whiteTickIcon from "../assets/tick.png";
 import SearchRestaurant from "../components/SearchRestaurant/SearchRestaurant";
 import RestaurantCard from "../components/RestaurantCard/RestaurantCard";
 import BookingModal from "../components/BookingModal/BookingModal";
@@ -77,7 +77,11 @@ export default function Search() {
                 : `${restaurants.length} restaurants available in ${city}`}
             </h1>
             <p className={styles.verifiedSubtitle}>
-              <CheckCircleOutlineIcon className={styles.verifiedIcon} />
+              <img
+                src={whiteTickIcon}
+                alt="White Tick Icon"
+                className={styles.whiteTick}
+              />
               <span>
                 Book tables with minimum wait-time & verified restaurant details
               </span>
