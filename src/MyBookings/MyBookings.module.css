@@ -1,0 +1,206 @@
+.myBookingsRoot {
+  background-color: #f7fbff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.blueHeaderBand {
+  background: #2aa7ff;
+  height: 110px;
+  width: 100%;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.floatingSearchContainer {
+  max-width: 1170px;
+  width: 90%;
+  margin: -60px auto 0;
+  position: relative;
+  z-index: 10;
+}
+
+.searchCard {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bodyWrapper {
+  max-width: 1170px;
+  width: 90%;
+  margin: 2.5rem auto 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.headingSection {
+  margin-top: 0.5rem;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #102851;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.contentSplitGrid {
+  display: grid;
+  grid-template-columns: 2.1fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.bookingList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.emptyState {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  border: 1px solid #edf2f7;
+  font-family: "Poppins", sans-serif;
+  color: #5c6a79;
+}
+
+.bookingCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid #edf2f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  gap: 1.5rem;
+}
+
+.cardLeft {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.restaurantIcon {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurantName {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2aa7ff;
+  margin: 0 0 0.25rem 0;
+}
+
+.restaurantCity {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #102851;
+  margin: 0 0 0.15rem 0;
+}
+
+.restaurantAddress {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  color: #4b5563;
+  margin: 0 0 0.8rem 0;
+}
+
+.ratingBadge {
+  background-color: #00a500;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: fit-content;
+}
+
+.badgesWrapper {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeBadge {
+  border: 1px solid #2aa7ff;
+  color: #2aa7ff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.dateBadge {
+  border: 1px solid #00a500;
+  color: #00a500;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.adBannerSidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.adImage {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .contentSplitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .adBannerSidebar {
+    display: none;
+  }
+
+  .bookingCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .badgesWrapper {
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+}
