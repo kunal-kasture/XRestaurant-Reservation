@@ -15,7 +15,6 @@ export default function SearchRestaurant() {
   const [cities, setCities] = useState([]);
   const [selectedState, setSelectedState] = useState(urlState);
   const [selectedCity, setSelectedCity] = useState(urlCity);
-  const [loadingCities, setLoadingCities] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -46,21 +45,17 @@ export default function SearchRestaurant() {
     const stateVal = e.target.value;
     setSelectedState(stateVal);
     setSelectedCity("");
-    setCities([]);
 
     if (stateVal) {
-      setLoadingCities(true);
       axios
         .get(
           `https://restaurantdata.onrender.com/cities/${encodeURIComponent(stateVal)}`,
         )
         .then((res) => {
           setCities(res.data || []);
-          setLoadingCities(false);
         })
         .catch((err) => {
           console.error("Error loading cities:", err);
-          setLoadingCities(false);
         });
     }
   };
@@ -125,15 +120,12 @@ export default function SearchRestaurant() {
           value={selectedCity}
           onChange={(e) => setSelectedCity(e.target.value)}
           displayEmpty
-          disabled={!selectedState || loadingCities}
           className={styles.muiSelect}
           IconComponent={ArrowDropDownIcon}
           MenuProps={menuProps}
         >
           <MenuItem value="" disabled>
-            <span className={styles.placeholderText}>
-              {loadingCities ? "Loading..." : "City"}
-            </span>
+            <span className={styles.placeholderText}>City</span>
           </MenuItem>
           {cities.map((ct) => (
             <MenuItem key={ct} value={ct}>
