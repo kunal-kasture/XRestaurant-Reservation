@@ -12,7 +12,7 @@ export default function TimeSlotPicker({ onSelectSlot }) {
     <div className={styles.slotPickerRoot}>
       {Object.entries(SLOTS).map(([period, timeList]) => (
         <div key={period} className={styles.periodRow}>
-          <span className={styles.periodLabel}>{period}</span>
+          <p className={styles.periodLabel}>{period}</p>
           <div className={styles.slotList}>
             {timeList.map((time) => (
               <button

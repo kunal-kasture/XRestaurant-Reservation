@@ -43,7 +43,7 @@ export default function DaySelector({
               className={`${styles.dateTab} ${isSelected ? styles.activeTab : ""}`}
               onClick={() => onSelectDate(item.dateString)}
             >
-              <span className={styles.dayTitle}>{item.label}</span>
+              <p className={styles.dayTitle}>{item.label}</p>
               <span className={styles.slotsAvailable}>10 slots available</span>
               {isSelected && <div className={styles.activeIndicator} />}
             </div>

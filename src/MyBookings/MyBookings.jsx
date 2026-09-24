@@ -12,8 +12,14 @@ export default function MyBookings() {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("bookings") || "[]");
-    setBookings(saved);
+    try {
+      const raw = localStorage.getItem("bookings");
+      const saved = raw ? JSON.parse(raw) : [];
+      setBookings(Array.isArray(saved) ? saved : []);
+    } catch (e) {
+      console.error("Failed to parse bookings from localStorage", e);
+      setBookings([]);
+    }
   }, []);
 
   const formatDate = (dateStr) => {

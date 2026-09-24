@@ -60,7 +60,7 @@ export default function RestaurantCard({ restaurant, onSelectSlot }) {
             className={styles.bookBtn}
             onClick={() => setIsCalendarOpen((prev) => !prev)}
           >
-            {isCalendarOpen ? "Hide Reservation" : "Book FREE Reservation"}
+            Book FREE Reservation
           </button>
         </div>
       </div>
