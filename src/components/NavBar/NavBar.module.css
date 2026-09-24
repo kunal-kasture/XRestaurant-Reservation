@@ -157,7 +157,6 @@
   padding: 0.5rem 0;
 }
 
-/* Tablet & Mobile Media Queries */
 @media (max-width: 1024px) {
   .navLinks {
     gap: 1rem;
