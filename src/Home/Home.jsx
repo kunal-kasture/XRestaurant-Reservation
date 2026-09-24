@@ -2,11 +2,11 @@ import React from "react";
 import HeroServices from "../components/IconLayout/HeroServices";
 import Footer from "../components/Footer/Footer";
 import chefImg from "../assets/chef.png";
+import SearchRestaurant from "../components/SearchRestaurant/SearchRestaurant";
 
 export default function Home() {
   return (
     <div className="home-page-root">
-      {/* Light blue hero background wrapper */}
       <section className="hero-section">
         <div className="hero-content-grid">
           <div className="hero-text-block">
@@ -29,9 +29,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Floating Card overlapping the hero and page body */}
       <div className="floating-card-wrapper">
         <div className="search-card-container-slot">
+          <SearchRestaurant />
           <HeroServices />
         </div>
       </div>

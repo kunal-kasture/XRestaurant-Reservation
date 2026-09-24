@@ -1,0 +1,111 @@
+.searchForm {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  width: 100% !important;
+  margin-bottom: 2rem !important;
+}
+
+.inputPill {
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  background-color: #fcfdfe !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  padding: 0 12px 0 16px !important;
+  height: 52px !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+.inputPill:focus-within {
+  border-color: #2aa7ff !important;
+  box-shadow: 0 0 0 2px rgba(42, 167, 255, 0.15) !important;
+}
+
+.inputSearchIcon {
+  font-size: 20px !important;
+  color: #6b7280 !important;
+  margin-right: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.muiSelect {
+  flex: 1 !important;
+  height: 100% !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+  color: #102851 !important;
+}
+
+.muiSelect :global(.MuiSelect-select) {
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  background: transparent !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+}
+
+.muiSelect :global(.MuiOutlinedInput-notchedOutline) {
+  border: none !important;
+}
+
+.muiSelect :global(.MuiSelect-icon) {
+  color: #6b7280 !important;
+  font-size: 24px !important;
+  right: 0 !important;
+}
+
+.placeholderText {
+  color: #9ca3af !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.searchButton {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background-color: #2aa7ff !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  height: 52px !important;
+  padding: 0 36px !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 4px 12px rgba(42, 167, 255, 0.25) !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.searchButton:hover {
+  background-color: #1a96ee !important;
+}
+
+.btnSearchIcon {
+  font-size: 20px !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .searchForm {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .inputPill,
+  .searchButton {
+    width: 100% !important;
+  }
+}

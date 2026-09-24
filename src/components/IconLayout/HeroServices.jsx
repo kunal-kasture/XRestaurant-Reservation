@@ -1,7 +1,7 @@
 import React from "react";
 import IconCard from "../IconCard/IconCard";
 
-import restaurantIcon from "../../assets/restaurant.png";
+import restaurantIcon from "../../assets/menu-icon.png";
 import locationIcon from "../../assets/location-icon.png";
 import reservationIcon from "../../assets/reservation-icon.png";
 import specialIcon from "../../assets/special-icon.png";
